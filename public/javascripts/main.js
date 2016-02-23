@@ -6,7 +6,7 @@ angular.module('JobApp')
 	$scope.postUser = function(){
 		$http.post('/applicant', $scope.user)
 			 .then(function(serverData){
-			 	
+			 	$scope.user = {}
 			 })
 	}
 

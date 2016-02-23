@@ -14,7 +14,7 @@ function createUser(req, res){
 	person.save(function(err, savedUser){
 		console.log('yey')	
 	})
-	res.send()
+	res.send('yay')
 }
 
 function getUser(req, res){
