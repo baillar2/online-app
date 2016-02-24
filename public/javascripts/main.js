@@ -29,10 +29,12 @@ angular.module('JobApp')
 			 	console.log($scope.list)
 			 })
 
-		$scope.removeUser = function(id){
-			$http.post('/api/removeUser', {id:id})
-			.then(function(serverData){
-				$scope.list = serverData.data
-			})
+		$scope.removeUser = function(user){
+			$http.post('/api/removeUser', user)
+				.success(function(serverData){
+					var index = $scope.list.indexOf(user)
+					$scope.list.splice(index, 1)
+				})
+				
 		}
 	}]);

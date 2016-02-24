@@ -25,9 +25,9 @@ function getUser(req, res){
 }
 
 function removeUser(req, res){
-	model.remove({_id:req.body.id}, function(err, doc){
+	model.remove({_id:req.body._id}, function(err, doc){
 		console.log(doc)
-		res.send(model)
+		res.send(doc)
 	})
 
 }
