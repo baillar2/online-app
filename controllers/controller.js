@@ -24,9 +24,16 @@ function getUser(req, res){
 	})
 }
 
+function removeUser(req, res){
+	model.remove({_id:req.body.id}, function(err, doc){
+		console.log(doc)
+		res.send(model)
+	})
 
+}
 
 module.exports = {
 	createUser: createUser,
-	getUser: getUser
+	getUser: getUser,
+	removeUser: removeUser,
 }

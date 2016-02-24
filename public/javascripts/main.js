@@ -23,9 +23,16 @@ angular.module('JobApp')
 
 		$http.get('/api/applicants')
 			 .then(function(serverData){
-			 $scope.list = serverData.data
+			 $scope.list = serverData.data || []
 		 	 //$scope.list.extend(serverData.data)
 			 	console.log(serverData.data)
 			 	console.log($scope.list)
 			 })
+
+		$scope.removeUser = function(id){
+			$http.post('/api/removeUser', {id:id})
+			.then(function(serverData){
+				$scope.list = serverData.data
+			})
+		}
 	}]);

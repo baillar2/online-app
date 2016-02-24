@@ -12,12 +12,13 @@
 	  
     <div class="container">
       <h1>Applicants</h1>
-      <ul ng-repeat="user in list">
+      <ul class="user-box" ng-repeat="user in list">
           <li >{{user.name}}</li>
           <li >{{user.bio}}</li>
           <li >{{user.skills}}</li>
           <li >{{user.years}}</li>
           <li >{{user.why}}</li>
+          <li><button class="btn btn-warning" ng-click="removeUser(user._id)">Delete Me</button></li>
       </ul>
     </div>
 	  

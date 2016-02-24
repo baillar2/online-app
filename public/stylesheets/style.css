@@ -5,3 +5,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+.user-box {
+	border:thin solid black;
+	border-radius: 5px;
+	padding:20px;
+	width: 400px;
+	
+}

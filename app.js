@@ -30,8 +30,10 @@ app.get('/success', function(req, res){
 	res.sendFile('html/sucess.html', {root: './public'})
 })
 
+app.post('/api/removeUser', controller.removeUser)
 
-// Creating Server and Listening for Connections \\
+
+// Creating Server and Listening for connections \\
 var port = 3000
 app.listen(port, function(){
   console.log('Server running on port ' + port);
